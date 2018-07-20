@@ -8,20 +8,14 @@ pre { font: inherit; word-wrap: break-word; background: none; border: none; }
 .force-thumbnail img { height: auto; }
 </style>
 
-# Gme.duke.edu/ Assessment
+# Gme.duke.edu/ Homepage Assessment 07/20/2018
 
 __https://gme.duke.edu/__
 
 __Screenshot:__
 
 
-/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu --screenshot --window-size=1400,800 https://gme.duke.edu
-
 ![Screenshot of this website](assets/screenshot.png)
-
-# Accessibility
-
-
 
 
 <br>

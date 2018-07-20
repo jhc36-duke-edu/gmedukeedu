@@ -510,28 +510,24 @@ pre { font: inherit; word-wrap: break-word; background: none; border: none; }
 .force-thumbnail img { height: auto; }
 </style>
 
-<h1 id="toc_0">Gme.duke.edu/ Assessment</h1>
+<h1 id="toc_0">Gme.duke.edu/ Homepage Assessment 07/20/2018</h1>
 
 <p><strong>https://gme.duke.edu/</strong></p>
 
 <p><strong>Screenshot:</strong></p>
 
-<p>/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu --screenshot --window-size=1400,800 https://gme.duke.edu</p>
-
 <p><img src="assets/screenshot.png" alt="Screenshot of this website"></p>
-
-<h1 id="toc_1">Accessibility</h1>
 
 <p><br></p>
 
-<h2 id="toc_2">Offscreen content is not hidden from assistive technology</h2>
+<h2 id="toc_1">Offscreen content is not hidden from assistive technology</h2>
 
 <p>Manual Test: Offscreen content is hidden from assistive technology</p>
 
 <p>Description:<br>
 Offscreen content is hidden with display: none or aria-hidden=true. <a href="https://developers.google.com/web/fundamentals/accessibility/how-to-review#try_it_with_a_screen_reader">Learn more</a>.</p>
 
-<h3 id="toc_3">Main navigation is not keyboard or screen reader accessible [Priority]</h3>
+<h3 id="toc_2">Main navigation is not keyboard or screen reader accessible [Priority]</h3>
 
 <p>Issues: 1. The main menu hamburger button is not focusable because <code>&lt;a&gt;</code> elements with no <code>href</code> attribute cannot receive focus.  2. When a screen reader comes across this link it will only say &quot;nav&quot;. Since this is the only way to navigate the website we should add some screen reader only text to indicate its purpose. 3. When a user tabs through the website, the keyboard focus indicator gets lost inside the the off-screen main menu.</p>
 
@@ -547,7 +543,7 @@ Offscreen content is hidden with display: none or aria-hidden=true. <a href="htt
   &lt;span class=&quot;v&quot;&gt;v&lt;/span&gt;
 &lt;/a&gt;</code></pre></div>
 
-<h4 id="toc_4">Suggested solution:</h4>
+<h4 id="toc_3">Suggested solution:</h4>
 
 <p>Truly hide the menu when it is intended to be off-screen. Add correct ARIA attributes and states. Make the button keyboard and screen reader focusable.</p>
 
@@ -585,17 +581,17 @@ $navToggle.on(&#39;click&#39;, function() {
 
 <p><br></p>
 
-<h2 id="toc_5">Buttons do not have an accessible name</h2>
+<h2 id="toc_4">Buttons do not have an accessible name</h2>
 
 <p>When a button doesn&#39;t have an accessible name, screen readers announce it as &quot;button&quot;, making it unusable for users who rely on screen readers. <a href="https://dequeuniversity.com/rules/axe/2.2/button-name?application=lighthouse">Learn more</a>.</p>
 
-<h3 id="toc_6">The Search <code>button</code> has no <code>value</code> attribute and it contains no inner text to indicate its purpose [Priority]</h3>
+<h3 id="toc_5">The Search <code>button</code> has no <code>value</code> attribute and it contains no inner text to indicate its purpose [Priority]</h3>
 
 <p><strong>Visual location:</strong></p>
 
 <p><img src="assets/button-name--search.png" alt="button is not descriptive"></p>
 
-<h4 id="toc_7">HTML location:</h4>
+<h4 id="toc_6">HTML location:</h4>
 
 <div><pre><code class="language-markup">&lt;button type=&quot;submit&quot; class=&quot;button-submit&quot;&gt;
   &lt;svg&gt;
@@ -603,7 +599,7 @@ $navToggle.on(&#39;click&#39;, function() {
   &lt;/svg&gt;
 &lt;/button&gt;</code></pre></div>
 
-<h4 id="toc_8">Suggested solution:</h4>
+<h4 id="toc_7">Suggested solution:</h4>
 
 <p>There are many simple ways to fix this issue. Choose one of the following:</p>
 
@@ -659,14 +655,14 @@ Fix all of the following:
 
 <p><br></p>
 
-<h2 id="toc_9">Headings don&#39;t skip levels</h2>
+<h2 id="toc_8">Headings don&#39;t skip levels</h2>
 
 <p>Manual Test: Headings don&#39;t skip levels</p>
 
 <p>Description:<br>
 Headings are used to create an outline for the page and heading levels are not skipped. <a href="https://developers.google.com/web/fundamentals/accessibility/how-to-review#take_advantage_of_headings_and_landmarks">Learn more</a>.</p>
 
-<h3 id="toc_10">Missing <code>&lt;h1&gt;</code></h3>
+<h3 id="toc_9">Missing <code>&lt;h1&gt;</code></h3>
 
 <p>Pages should have one <code>&lt;h1&gt;</code> for accessibility, it also helps with search engine optimization if the <code>&lt;h1&gt;</code> has text in it. </p>
 
@@ -684,11 +680,11 @@ Headings are used to create an outline for the page and heading levels are not s
 
 <p><br></p>
 
-<h2 id="toc_11">Links do not have a discernible name [Priority]</h2>
+<h2 id="toc_10">Links do not have a discernible name [Priority]</h2>
 
 <p>Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. <a href="https://dequeuniversity.com/rules/axe/2.2/link-name?application=lighthouse">Learn more</a>.</p>
 
-<h3 id="toc_12">The logo <code>&lt;a&gt;</code> link has no text inside.</h3>
+<h3 id="toc_11">The logo <code>&lt;a&gt;</code> link has no text inside.</h3>
 
 <p><strong>Visual location:</strong></p>
 
@@ -700,7 +696,7 @@ Headings are used to create an outline for the page and heading levels are not s
 
 <p>Empty links are not read to a screen reader user, as a result, they will no know what the link does or where it would take them.</p>
 
-<h4 id="toc_13">Suggested solution:</h4>
+<h4 id="toc_12">Suggested solution:</h4>
 
 <p>Add screen reader only text inside link.</p>
 
@@ -736,18 +732,18 @@ Fix all of the following:
 
 <p><br></p>
 
-<h2 id="toc_14">HTML5 landmark elements are used to improve navigation</h2>
+<h2 id="toc_13">HTML5 landmark elements are used to improve navigation</h2>
 
 <p>Manual Test: HTML5 landmark elements are used to improve navigation</p>
 
 <p>Description:<br>
 Landmark elements (&lt;main&gt;, &lt;nav&gt;, etc.) are used to improve the keyboard navigation of the page for assistive technology. <a href="https://developers.google.com/web/fundamentals/accessibility/how-to-review#take_advantage_of_headings_and_landmarks">Learn more</a>.</p>
 
-<h3 id="toc_15">Missing <code>&lt;main&gt;</code> element</h3>
+<h3 id="toc_14">Missing <code>&lt;main&gt;</code> element</h3>
 
 <p>The website has a <code>&lt;header&gt;</code> and a <code>&lt;footer&gt;</code>.  We just need to add a <code>&lt;main&gt;</code> element.  It allows the screen reader user to skip to the main content area.</p>
 
-<h4 id="toc_16">Suggested Solution:</h4>
+<h4 id="toc_15">Suggested Solution:</h4>
 
 <p>Wrap the <code>&lt;section&gt;</code> elements in one <code>&lt;main&gt;</code> element.</p>
 
@@ -767,11 +763,11 @@ Landmark elements (&lt;main&gt;, &lt;nav&gt;, etc.) are used to improve the keyb
 
 <p><br></p>
 
-<h2 id="toc_17">Form elements do not have associated labels</h2>
+<h2 id="toc_16">Form elements do not have associated labels</h2>
 
 <p>Labels ensure that form controls are announced properly by assistive technologies, like screen readers. <a href="https://dequeuniversity.com/rules/axe/2.2/label?application=lighthouse">Learn more</a>.</p>
 
-<h3 id="toc_18">This element is missing a label [Priority]</h3>
+<h3 id="toc_17">This element is missing a label [Priority]</h3>
 
 <p><strong>Visual location:</strong></p>
 
@@ -781,7 +777,7 @@ Landmark elements (&lt;main&gt;, &lt;nav&gt;, etc.) are used to improve the keyb
 
 <div><pre><code class="language-markup">&lt;input type=&quot;search&quot; name=&quot;keyword&quot; class=&quot;input-search&quot; placeholder=&quot;Search&quot;&gt;</code></pre></div>
 
-<h4 id="toc_19">Suggested solution:</h4>
+<h4 id="toc_18">Suggested solution:</h4>
 
 <p>Add <code>&lt;label for=&quot;something&quot;&gt;</code> to associate the label with that form field. If the element does not have and ID attribute to associate add <code>id=&quot;something&quot;</code>.
 If you wish to visually hide the label add class <code>.element-invisible</code> to the <code>&lt;label&gt;</code>.</p>
@@ -809,7 +805,7 @@ Fix any of the following:
 
 <p><br></p>
 
-<h2 id="toc_20"><code>[user-scalable=&quot;no&quot;]</code> is used in the <code>&lt;meta name=&quot;viewport&quot;&gt;</code> element or the <code>[maximum-scale]</code> attribute is less than 5.</h2>
+<h2 id="toc_19"><code>[user-scalable=&quot;no&quot;]</code> is used in the <code>&lt;meta name=&quot;viewport&quot;&gt;</code> element or the <code>[maximum-scale]</code> attribute is less than 5.</h2>
 
 <p>Disabling zooming is problematic for users with low vision who rely on screen magnification to properly see the contents of a web page. <a href="https://dequeuniversity.com/rules/axe/2.2/meta-viewport?application=lighthouse">Learn more</a>.</p>
 
@@ -817,7 +813,7 @@ Fix any of the following:
 
 <div><pre><code class="language-markup">&lt;meta name=&quot;viewport&quot; id=&quot;viewport&quot; content=&quot;width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0&quot;&gt;</code></pre></div>
 
-<h4 id="toc_21">Suggested Solution:</h4>
+<h4 id="toc_20">Suggested Solution:</h4>
 
 <p>Option 1:</p>
 
@@ -861,11 +857,11 @@ Fix any of the following:
 
 <p><br></p>
 
-<h2 id="toc_22">Background and foreground colors do not have a sufficient contrast ratio.</h2>
+<h2 id="toc_21">Background and foreground colors do not have a sufficient contrast ratio.</h2>
 
 <p>Low-contrast text is difficult or impossible for many users to read. <a href="https://dequeuniversity.com/rules/axe/2.2/color-contrast?application=lighthouse">Learn more</a>.</p>
 
-<h3 id="toc_23">The element  <em>&quot;n&quot;</em>, <em>&quot;a&quot;</em>, <em>&quot;v&quot;</em> has low contrast.</h3>
+<h3 id="toc_22">The element  <em>&quot;n&quot;</em>, <em>&quot;a&quot;</em>, <em>&quot;v&quot;</em> has low contrast.</h3>
 
 <p>This is a false positive, but false positives have been used in litigation to support claims of inaccessible websites, because lawyers don&#39;t understand this stuff. So, we must fix it anyway.</p>
 
@@ -881,7 +877,7 @@ Fix any of the following:
   &lt;span class=&quot;v&quot;&gt;v&lt;/span&gt;
 &lt;/a&gt;</code></pre></div>
 
-<h4 id="toc_24">Suggested solution:</h4>
+<h4 id="toc_23">Suggested solution:</h4>
 
 <p>Element has insufficient color contrast of 1.14 (foreground color: #00539b, background color: #494a4d, font size: 0.0pt, font weight: normal). Expected contrast ratio of 4.5:1</p>
 
@@ -911,7 +907,7 @@ Fix any of the following:
 
 <p><br></p>
 
-<h3 id="toc_25">The element <em>&quot;Copyright ©2018 Duke Graduate Medical Education&quot;</em> and <em>&quot;Website Design and Development by New Media Campaigns&quot;</em> has low contrast. [Priority]</h3>
+<h3 id="toc_24">The element <em>&quot;Copyright ©2018 Duke Graduate Medical Education&quot;</em> and <em>&quot;Website Design and Development by New Media Campaigns&quot;</em> has low contrast. [Priority]</h3>
 
 <p><strong>Visual location:</strong></p>
 
@@ -928,7 +924,7 @@ Fix any of the following:
   by New Media Campaigns
  &lt;/span&gt;</code></pre></div>
 
-<h4 id="toc_26">Suggested solution:</h4>
+<h4 id="toc_25">Suggested solution:</h4>
 
 <p>Element has insufficient color contrast of 3.67 (foreground color: #68b9ff, background color: #00539b, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1</p>
 
@@ -967,7 +963,7 @@ Fix any of the following:
 
 <p><br></p>
 
-<h3 id="toc_27">The link <em>&quot;Website Design and Development&quot;</em> has low contrast. [Priority]</h3>
+<h3 id="toc_26">The link <em>&quot;Website Design and Development&quot;</em> has low contrast. [Priority]</h3>
 
 <p><strong>Visual location:</strong></p>
 
@@ -977,7 +973,7 @@ Fix any of the following:
 
 <div><pre><code class="language-markup">&lt;a href=&quot;http://newmediacampaigns.com&quot; target=&quot;_blank&quot;&gt;Website Design and Development&lt;/a&gt;</code></pre></div>
 
-<h4 id="toc_28">Suggested solution:</h4>
+<h4 id="toc_27">Suggested solution:</h4>
 
 <p>Element has insufficient color contrast of 3.67 (foreground color: #68b9ff, background color: #00539b, font size: 9.8pt, font weight: normal). Expected contrast ratio of 4.5:1</p>
 
@@ -1012,18 +1008,18 @@ Fix any of the following:
 
 <p><br></p>
 
-<h2 id="toc_29">The user&#39;s focus is directed to new content added to the page</h2>
+<h2 id="toc_28">The user&#39;s focus is directed to new content added to the page</h2>
 
 <p>Manual Test: The user&#39;s focus is directed to new content added to the page</p>
 
 <p>Description:<br>
 If new content, such as a dialog, is added to the page, the user&#39;s focus is directed to it. <a href="https://developers.google.com/web/fundamentals/accessibility/how-to-review#start_with_the_keyboard">Learn more</a>.</p>
 
-<h3 id="toc_30">Main menu</h3>
+<h3 id="toc_29">Main menu</h3>
 
 <p>Does not indicate that new content is added to the screen, but this will be fixed by the task &quot;Main navigation is not keyboard or screen reader accessible&quot; above.</p>
 
-<h3 id="toc_31">Image caption hover states (x3)</h3>
+<h3 id="toc_30">Image caption hover states (x3)</h3>
 
 <p><strong>Visual location:</strong></p>
 
@@ -1037,11 +1033,11 @@ If new content, such as a dialog, is added to the page, the user&#39;s focus is 
   &lt;/div&gt;
 &lt;/div&gt;</code></pre></div>
 
-<h4 id="toc_32">Suggested solution:</h4>
+<h4 id="toc_31">Suggested solution:</h4>
 
 <p>I&#39;m not sure what to do with this. Its technically a violation, but any fix we do on it would cause other accessibility problems, so ideally it should not be hidden, but its a low priority issue.</p>
 
-<h3 id="toc_33">Image caption low contrast (x3) [Priority]</h3>
+<h3 id="toc_32">Image caption low contrast (x3) [Priority]</h3>
 
 <p>There is also a contrast issue on the text here. It is illegible.</p>
 
@@ -1049,7 +1045,7 @@ If new content, such as a dialog, is added to the page, the user&#39;s focus is 
 
 <p><img src="assets/new-content--color-contrast-low.png" alt="low contrast overlay"></p>
 
-<h4 id="toc_34">Suggested solution:</h4>
+<h4 id="toc_33">Suggested solution:</h4>
 
 <p>Add <code>text-shadow</code> to existing selector.</p>
 
@@ -1080,7 +1076,7 @@ If new content, such as a dialog, is added to the page, the user&#39;s focus is 
 
 <p><br></p>
 
-<h3 id="toc_35">&quot;Learn more&quot; is not descriptive link text [priority]</h3>
+<h3 id="toc_34">&quot;Learn more&quot; is not descriptive link text [priority]</h3>
 
 <p>Link text with the words &quot;Learn more&quot; is not discriptive. The screen reader will reade <em>&quot;Learn more&quot;</em> to screen reader users. As a result, they will not know what the link does or where it will take them.</p>
 
@@ -1094,7 +1090,7 @@ If new content, such as a dialog, is added to the page, the user&#39;s focus is 
 
 <p><img src="assets/descriptive--learn-more-1.png" alt="learn more not good link text"></p>
 
-<h4 id="toc_36">Suggested solution:</h4>
+<h4 id="toc_35">Suggested solution:</h4>
 
 <p>Or add <a href="https://accessible360.com/accessible360-blog/use-aria-label-screen-reader-text/">screen reader only text</a> inside the link.</p>
 
@@ -1117,7 +1113,7 @@ If new content, such as a dialog, is added to the page, the user&#39;s focus is 
 
 <p><br></p>
 
-<h2 id="toc_37">Visual order on the page follows DOM order</h2>
+<h2 id="toc_36">Visual order on the page follows DOM order</h2>
 
 <p>Manual Test: Visual order on the page follows DOM order</p>
 
@@ -1134,7 +1130,7 @@ DOM order matches the visual order, improving navigation for assistive technolog
 
 <p><br></p>
 
-<h2 id="toc_38">Custom controls have ARIA roles</h2>
+<h2 id="toc_37">Custom controls have ARIA roles</h2>
 
 <p>Custom controls have ARIA roles</p>
 
@@ -1147,7 +1143,7 @@ Custom interactive controls have appropriate ARIA roles. <a href="https://develo
 
 <p><br></p>
 
-<h2 id="toc_39">The page has a logical tab order</h2>
+<h2 id="toc_38">The page has a logical tab order</h2>
 
 <p>Manual Test: The page has a logical tab order</p>
 
@@ -1162,7 +1158,7 @@ Tabbing through the page follows the visual layout. Users cannot focus elements 
 
 <p><br></p>
 
-<h2 id="toc_40">Site works cross-browser</h2>
+<h2 id="toc_39">Site works cross-browser</h2>
 
 <p>Site works cross-browser</p>
 
@@ -1175,7 +1171,7 @@ To reach the most number of users, sites should work across every major browser.
 
 <p><br></p>
 
-<h2 id="toc_41">User focus is not accidentally trapped in a region</h2>
+<h2 id="toc_40">User focus is not accidentally trapped in a region</h2>
 
 <p>Manual Test: User focus is not accidentally trapped in a region</p>
 
@@ -1190,7 +1186,7 @@ A user can tab into and out of any control or region without accidentally trappi
 
 <p><br></p>
 
-<h2 id="toc_42">Interactive controls are keyboard focusable</h2>
+<h2 id="toc_41">Interactive controls are keyboard focusable</h2>
 
 <p>Manual Test: Interactive controls are keyboard focusable</p>
 
